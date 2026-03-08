@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Women's Day, Mommy</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #fff1f7, #f5e9ff);
+      color: #3d2447;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    body::before {
+      content: "🌸 🌺 🌼 💮 🌸 🌺 🌼 💮 🌸 🌺 🌼 💮";
+      position: fixed;
+      inset: 0;
+      font-size: 48px;
+      line-height: 120px;
+      word-spacing: 60px;
+      opacity: 0.15;
+      pointer-events: none;
+      z-index: 0;
+      text-align: center;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    .hero, .card {
+      background: rgba(255,255,255,0.88);
+      backdrop-filter: blur(8px);
+      border-radius: 24px;
+      box-shadow: 0 10px 30px rgba(122, 69, 150, 0.12);
+      padding: 32px;
+      margin: 24px 0;
+    }
+    h1, h2 {
+      margin-top: 0;
+    }
+    h1 {
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      color: #a03ab3;
+      text-align: center;
+    }
+    .subtitle {
+      text-align: center;
+      font-size: 1.15rem;
+      line-height: 1.7;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .photo-box {
+      margin: 24px auto 8px;
+      max-width: 520px;
+      height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #9f6aa8;
+      padding: 18px;
+      background: #fff8fd;
+    }
+    .btn {
+      display: inline-block;
+      border: none;
+      border-radius: 999px;
+      padding: 14px 24px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      text-decoration: none;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(160, 58, 179, 0.2);
+    }
+    .primary {
+      background: linear-gradient(135deg, #f062c0, #9d4edd);
+      color: white;
+    }
+    .secondary {
+      background: #fff;
+      color: #9d4edd;
+      border: 2px solid #d9b8ef;
+    }
+    .center {
+      text-align: center;
+    }
+    ul {
+      padding-left: 22px;
+      line-height: 1.8;
+    }
+    .hidden-message {
+      display: none;
+      margin-top: 18px;
+      padding: 20px;
+      background: #fff7fc;
+      border-left: 5px solid #f062c0;
+      border-radius: 16px;
+      line-height: 1.8;
+    }
+    .voucher {
+      background: linear-gradient(135deg, #fff7e8, #fff1f6);
+      border: 2px dashed #f0b36c;
+    }
+    .voucher-code {
+      font-size: 1.3rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: #a85c00;
+      margin: 12px 0;
+    }
+    .footer-note {
+      text-align: center;
+      margin-top: 18px;
+      color: #7c5a85;
+    }
+    .heart, .petal {
+      position: fixed;
+      bottom: -20px;
+      pointer-events: none;
+      z-index: 2;
+    }
+    .heart {
+      font-size: 18px;
+      animation: floatUp 8s linear infinite;
+      opacity: 0.65;
+    }
+    .petal {
+      top: -40px;
+      bottom: auto;
+      font-size: 22px;
+      opacity: 0.75;
+      animation: fallDown 10s linear infinite;
+    }
+    @keyframes floatUp {
+      from { transform: translateY(0) scale(1); opacity: 0.7; }
+      to { transform: translateY(-110vh) scale(1.4); opacity: 0; }
+    }
+    @keyframes fallDown {
+      0% { transform: translate3d(0, -10vh, 0) rotate(0deg); opacity: 0; }
+      10% { opacity: 0.8; }
+      50% { transform: translate3d(30px, 45vh, 0) rotate(120deg); opacity: 0.85; }
+      100% { transform: translate3d(-20px, 110vh, 0) rotate(260deg); opacity: 0; }
+    }
+      to { transform: translateY(-110vh) scale(1.4); opacity: 0; }
+    }
+    @media (max-width: 640px) {
+      .hero, .card { padding: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section class="hero">
+      <h1>Хайрт ээждээ 
+        
+        "Олон улсын эмэгтэйчүүдийн эрхийг хамгаалах өдөр"-ийн мэнд хүргэе 💕</h1>
+      <p class="subtitle">
+        🤍🧚🏻‍♀️
+      </p>
+      <div class="photo-box">
+        <img src="mom.jpg" style="width:100%; height:auto; border-radius:18px;">
+      </div>
+      <div class="center" style="margin-top: 22px;">
+        <button class="btn primary" onclick="showMessage()">Open My Surprise🫢</button>
+      </div>
+      <div id="surpriseMessage" class="hidden-message">
+          Өшөө олон баярыг хамт тэмдэглэж, зөндөө олон газраар аялаж дурсамжуудыг бүтээцгээе.
+      </div>
+    </section>
+
+    
+
+    
+
+    <section id="dadSection" class="card" style="display:none;">
+      <h2>Аавыгаа яаж мартхав kk 💙</h2>
+      <p>
+        Хайрт аавдаа удахгүй болох Цэргийн баярын мэндийг охиноос нь урьдчилан хүргэж байна 💙
+      </p>
+      <div class="photo-box">
+        <img src="dad.jpg" alt="Аав ээжийн зураг" style="width:100%; height:100%; object-fit:cover; border-radius:18px;">
+      </div>
+      <div class="center" style="margin-top: 22px;">
+        <button class="btn primary" onclick="showVoucher()">Дахиад Surprise🫢</button>
+      </div>
+    </section>
+
+    <section id="voucherSection" class="card voucher" style="display:none;">
+      <h2>Ээж аавдаа зориулсан эрхийн бичиг 🌸</h2>
+      <p>Нэг өдрийг ч гэсэн алжаалаа тайлж амарч өнгөрүүлээрэй та хоёр минь.</p>
+      <div class="photo-box">
+        <img src="spa.jpg" alt="SPA эрхийн бичиг" style="width:100%; height:100%; object-fit:cover; border-radius:18px;">
+      </div>
+      <p><strong>For:</strong> My beloved Mom and Dad</p>
+    </section>
+
+
+    
+  </div>
+
+  <script>
+    function showMessage() {
+      const message = document.getElementById('surpriseMessage');
+      const dadSection = document.getElementById('dadSection');
+      message.style.display = 'block';
+      dadSection.style.display = 'block';
+      dadSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function showVoucher() {
+        const voucherSection = document.getElementById('voucherSection');
+        voucherSection.style.display = 'block';
+        setTimeout(() => {
+        voucherSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }, 100);
+    }
+
+    function createHearts() {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.textContent = ['💖', '💜', '🌸', '💕'][Math.floor(Math.random() * 4)];
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (5 + Math.random() * 5) + 's';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 9000);
+    }
+
+    let petalsRunning = true;
+
+    function createPetals() {
+      if(!petalsRunning) return;
+      const petal = document.createElement('div');
+      petal.className = 'petal';
+      petal.textContent = ['🌸','🌺','💮'][Math.floor(Math.random()*3)];
+      petal.style.left = Math.random()*100 + 'vw';
+      petal.style.animationDuration = (7 + Math.random()*5) + 's';
+      document.body.appendChild(petal);
+      setTimeout(()=>petal.remove(),12000);
+    }
+
+    setInterval(createHearts,700);
+    setInterval(createPetals,900);
+
+    const originalShowMessage = showMessage;
+    showMessage = function(){
+      petalsRunning = false;
+      originalShowMessage();
+    }
+  </script>
+</body>
+</html>
